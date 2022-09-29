@@ -5,6 +5,7 @@ import MovieDetails from '../pages/MovieDetails/MovieDetails';
 import Reviews from '../pages/Reviews/Reviews';
 import Cast from '../pages/Cast/Cast';
 import { Nav, MainWrapper, NavItem } from './App.styled';
+import ScrollToTop from 'react-scroll-to-top';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         </Route>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
+      <ScrollToTop smooth />
     </MainWrapper>
   );
 };

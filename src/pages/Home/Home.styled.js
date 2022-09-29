@@ -8,6 +8,7 @@ export const HomeTitle = styled.h1`
 
 export const HomeList = styled.ul`
   display: flex;
+
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
@@ -17,10 +18,19 @@ export const HomeList = styled.ul`
 `;
 
 export const HomeItem = styled.li`
+  /* /* background-color: #fff; */
+
+  /* align-self: stretch;
+  display: flex; */
+  /* flex-direction: column; */
   list-style: none;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
     transform: scale(1.03);
+  }
+  :last-child {
+    /* display: flex; */
+    /* align-self: flex-end; */
   }
 `;
 

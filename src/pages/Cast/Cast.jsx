@@ -23,7 +23,11 @@ const Cast = () => {
             return (
               <CastItem key={cast_id}>
                 <CastImage
-                  src={`https://image.tmdb.org/t/p/w500/${profile_path}`}
+                  src={
+                    profile_path
+                      ? `https://image.tmdb.org/t/p/w500/${profile_path}`
+                      : 'https://westsiderc.org/wp-content/uploads/2019/08/Image-Not-Available.png'
+                  }
                   alt={name}
                 />
                 <CastParagrapher>

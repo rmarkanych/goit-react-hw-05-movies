@@ -12,6 +12,7 @@ export const BtnBack = styled(Link)`
   padding: 10px;
   margin-left: 20px;
   margin-top: 20px;
+  margin-bottom: 10px;
   font-size: 40px;
   text-decoration: none;
   background-color: orange;
@@ -21,7 +22,6 @@ export const BtnBack = styled(Link)`
   &.active {
     color: gray;
   }
-
   :focus-visible:not(.active),
   :hover:not(.active) {
     color: gray;
@@ -31,7 +31,6 @@ export const MainWrap = styled.div`
   background-color: black;
   max-width: 1125px;
   margin: 0 auto;
-
   border-radius: 50px;
   max-height: 735px;
   box-shadow: 3px 3px 9px black;
@@ -43,7 +42,6 @@ export const Image = styled.img`
   border-bottom-left-radius: 50px;
   max-height: 725px;
 `;
-
 export const MovieWrapper = styled.div`
   margin-left: 20px;
   margin-top: 20px;
@@ -121,7 +119,6 @@ export const NavBtn = styled(NavLink)`
   &.active {
     color: gray;
   }
-
   :focus-visible:not(.active),
   :hover:not(.active) {
     color: gray;
@@ -131,7 +128,6 @@ export const NavBtn = styled(NavLink)`
 export const InfoTitle = styled.h2`
   font-family: 'Caveat Brush';
   font-size: 30px;
-
   display: block;
   text-align: center;
 `;

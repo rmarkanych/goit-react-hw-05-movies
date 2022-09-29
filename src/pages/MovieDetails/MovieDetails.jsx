@@ -1,4 +1,4 @@
-import { useParams, Outlet } from 'react-router-dom';
+import { useParams, Outlet, useLocation } from 'react-router-dom';
 import { getSearchedDetails } from '../../services/myApi';
 import { useEffect, useState } from 'react';
 import {
@@ -21,7 +21,8 @@ import {
 const MoviesDetails = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
-
+  const location = useLocation();
+  const backLinkHref = location.state?.from ?? '/movies';
   useEffect(() => {
     getSearchedDetails(movieId).then(data => setMovie(data));
     // eslint-disable-next-line
@@ -42,11 +43,18 @@ const MoviesDetails = () => {
 
   return (
     <>
-      <BtnBack to={'/movie'}> ↩ </BtnBack>
+      <BtnBack to={backLinkHref} state={{ from: backLinkHref }}>
+        {' '}
+        ↩{' '}
+      </BtnBack>
       <MainWrap>
         <Item key={id}>
           <Image
-            src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
+            src={
+              poster_path
+                ? `https://image.tmdb.org/t/p/w500/${poster_path}`
+                : 'https://westsiderc.org/wp-content/uploads/2019/08/Image-Not-Available.png'
+            }
             alt="dasdas"
           />
           <MovieWrapper>
@@ -67,8 +75,12 @@ const MoviesDetails = () => {
       </MainWrap>
       <InfoTitle>Additional information</InfoTitle>
       <BtnWrap>
-        <NavBtn to={`/movies/${id}/cast`}>Cast</NavBtn>
-        <NavBtn to={`/movies/${id}/reviews`}>Review</NavBtn>
+        <NavBtn to={`/movies/${id}/cast`} state={{ from: backLinkHref }}>
+          Cast
+        </NavBtn>
+        <NavBtn to={`/movies/${id}/reviews`} state={{ from: backLinkHref }}>
+          Review
+        </NavBtn>
       </BtnWrap>
 
       <Outlet />

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+
 export const Nav = styled.nav`
   padding-left: 0;
   padding-right: 0;
@@ -34,6 +35,7 @@ export const NavItem = styled(NavLink)`
   :focus-visible:not(.active),
   :hover:not(.active) {
     color: gray;
+
     transform: scale(1.05);
   }
 `;

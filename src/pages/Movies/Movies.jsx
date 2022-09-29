@@ -1,7 +1,6 @@
-//import { Outlet } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useLocation } from 'react-router-dom';
 import {
   MoviesForm,
   MoviesInput,
@@ -19,6 +18,8 @@ const Movies = () => {
   const [search, setSearch] = useSearchParams();
   const [searchInput, setSearchInput] = useState('');
   const [searchedMovies, setSearchedMovies] = useState([]);
+  const location = useLocation();
+  // const backLinkHref = location.state?.from ?? '/movie';
   const query = search.get('query');
   const page = search.get('page');
   const onFormSubmit = e => {
@@ -38,21 +39,26 @@ const Movies = () => {
           name="searchInput"
           value={searchInput}
           autoComplete="off"
+          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+          title="Your may contain only letters without spaces."
+          required
           onChange={e => setSearchInput(e.target.value)}
         />
         <MoviesBtn type="submit">
           <BtnIcon>Search</BtnIcon>
         </MoviesBtn>
       </MoviesForm>
-
       <MovieList>
         {searchedMovies.map(({ title, id, vote_average, poster_path }) => {
-          console.log(searchedMovies);
           return (
             <MovieItem key={id}>
-              <Link to={`/movies/${id}`}>
+              <Link to={`/movies/${id}`} state={{ from: location }}>
                 <MovieImage
-                  src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
+                  src={
+                    poster_path
+                      ? `https://image.tmdb.org/t/p/w500/${poster_path}`
+                      : 'https://westsiderc.org/wp-content/uploads/2019/08/Image-Not-Available.png'
+                  }
                   alt={title}
                 />
               </Link>

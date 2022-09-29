@@ -7,11 +7,9 @@ export const CastList = styled.ul`
   flex-wrap: wrap;
   margin: 0;
 `;
-
 export const CastItem = styled.li`
   list-style: none;
 `;
-
 export const CastImage = styled.img`
   box-shadow: 3px 3px 9px black;
   width: 250px;
@@ -27,7 +25,6 @@ export const CastParagrapher = styled.p`
   margin-bottom: 0;
   margin-top: 5px;
 `;
-
 export const SpanWrap = styled.span`
   color: black;
 `;

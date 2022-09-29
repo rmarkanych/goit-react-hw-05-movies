@@ -9,6 +9,8 @@ import {
   ReviewContent,
   ReviewTextWrapper,
 } from './Reviews.styled';
+import ReactReadMoreReadLess from 'react-read-more-read-less';
+
 const Reviews = () => {
   const [movieReview, setMovieReview] = useState([]);
   const { movieId } = useParams();
@@ -29,7 +31,14 @@ const Reviews = () => {
                 <ReviewTextWrapper>Author: </ReviewTextWrapper> {author}
               </AuthorName>
               <ReviewContent>
-                <ReviewTextWrapper>Review:</ReviewTextWrapper> {content}
+                <ReviewTextWrapper>Review:</ReviewTextWrapper>
+                <ReactReadMoreReadLess
+                  charLimit={1000}
+                  readMoreText={'Read more ▼'}
+                  readLessText={'Read less ▲'}
+                >
+                  {content}
+                </ReactReadMoreReadLess>
               </ReviewContent>
             </ReviewItem>
           );
