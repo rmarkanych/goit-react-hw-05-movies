@@ -1,88 +1,118 @@
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 export const Item = styled.li`
   list-style: none;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  padding-left: 40px;
   display: flex;
   justify-content: center;
+`;
+export const BtnBack = styled(Link)`
+  display: flex;
+  max-width: 40px;
+  max-height: 40px;
+  padding: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 40px;
+  text-decoration: none;
+  background-color: orange;
+  border-radius: 7px;
+  color: black;
+  font-family: 'Caveat Brush';
+  &.active {
+    color: gray;
+  }
+
+  :focus-visible:not(.active),
+  :hover:not(.active) {
+    color: gray;
+  }
 `;
 export const MainWrap = styled.div`
   background-color: black;
   max-width: 1125px;
   margin: 0 auto;
-  margin-top: 20px;
-  padding-right: 20px;
+
   border-radius: 50px;
-  height: 735px;
+  max-height: 735px;
   box-shadow: 3px 3px 9px black;
 `;
 export const Image = styled.img`
-  width: 400px;
-  border-radius: 50px;
+  max-width: 400px;
+  margin: 0;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
   max-height: 725px;
-  align-items: center;
-  justify-content: center;
-  /* box-shadow: 3px 3px 9px black; */
 `;
 
 export const MovieWrapper = styled.div`
   margin-left: 20px;
-  /* background-color: black; */
-  border-radius: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin-top: 20px;
 `;
 export const Title = styled.h1`
   font-family: 'Caveat Brush';
   font-size: 40px;
   color: orange;
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
 `;
 export const ScoreParagrapher = styled.p`
   font-family: 'Caveat Brush';
   font-size: 40px;
   color: orange;
+  margin: 0;
+  color: #fbab7e;
+  margin-top: 5px;
+  margin-bottom: 5px;
 `;
 
 export const OverviewTitle = styled.h2`
   font-family: 'Caveat Brush';
   color: orange;
   font-size: 40px;
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
 `;
 export const GenresTitle = styled.h2`
   font-family: 'Caveat Brush';
   font-size: 40px;
   color: orange;
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
 `;
 export const OverviewParagrapher = styled.p`
   font-family: 'Caveat Brush';
-  width: 700px;
+  max-width: 700px;
   color: orange;
   font-size: 30px;
+  margin: 0;
+  color: #fbab7e;
+  margin-top: 5px;
+  margin-bottom: 5px;
 `;
 export const GenresParapher = styled.p`
   font-family: 'Caveat Brush';
   font-size: 40px;
   color: orange;
+  margin: 0;
+  color: #fbab7e;
+  margin-top: 5px;
+  margin-bottom: 5px;
 `;
-// Title,
-//   ScoreParagrapher,
-//   OverviewTitle,
-//   OverviewParagrapher,
-//   GenresTitle,
-//   GenresParapher,
 
 export const BtnWrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 50px;
-  padding: 20px;
 `;
 
 export const NavBtn = styled(NavLink)`
+  padding: 5px 15px;
   font-size: 30px;
+  margin-bottom: 20px;
   text-decoration: none;
   background-color: orange;
   border-radius: 7px;
@@ -97,4 +127,11 @@ export const NavBtn = styled(NavLink)`
     color: gray;
     transform: scale(1.05);
   }
+`;
+export const InfoTitle = styled.h2`
+  font-family: 'Caveat Brush';
+  font-size: 30px;
+
+  display: block;
+  text-align: center;
 `;

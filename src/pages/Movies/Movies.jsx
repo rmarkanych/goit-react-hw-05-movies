@@ -47,6 +47,7 @@ const Movies = () => {
 
       <MovieList>
         {searchedMovies.map(({ title, id, vote_average, poster_path }) => {
+          console.log(searchedMovies);
           return (
             <MovieItem key={id}>
               <Link to={`/movies/${id}`}>

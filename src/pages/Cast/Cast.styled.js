@@ -2,16 +2,14 @@ import styled from 'styled-components';
 
 export const CastList = styled.ul`
   display: flex;
+  justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
   margin: 0;
-  padding-bottom: 20px;
 `;
 
 export const CastItem = styled.li`
   list-style: none;
-  padding-top: 7px;
-  padding-bottom: 7px;
 `;
 
 export const CastImage = styled.img`
@@ -26,6 +24,10 @@ export const CastParagrapher = styled.p`
   color: gray;
   font-family: 'Caveat Brush';
   font-size: 20px;
-  margin-bottom: 7px;
-  margin-top: 7px;
+  margin-bottom: 0;
+  margin-top: 5px;
+`;
+
+export const SpanWrap = styled.span`
+  color: black;
 `;

@@ -14,6 +14,8 @@ import {
   MainWrap,
   NavBtn,
   BtnWrap,
+  BtnBack,
+  InfoTitle,
 } from './MovieDetails.styled';
 
 const MoviesDetails = () => {
@@ -28,16 +30,19 @@ const MoviesDetails = () => {
 
   const {
     original_title,
-    // popularity,
     poster_path,
     overview,
     genres,
     vote_average,
     id,
+    release_date,
   } = movie;
+  const data = new Date(release_date);
+  const year = data.getFullYear();
 
   return (
     <>
+      <BtnBack to={'/movie'}> ↩ </BtnBack>
       <MainWrap>
         <Item key={id}>
           <Image
@@ -45,7 +50,9 @@ const MoviesDetails = () => {
             alt="dasdas"
           />
           <MovieWrapper>
-            <Title>{original_title}</Title>
+            <Title>
+              {original_title} ({year})
+            </Title>
             <ScoreParagrapher>
               User Score: {((vote_average * 100) / 10).toFixed(1)}%
             </ScoreParagrapher>
@@ -58,6 +65,7 @@ const MoviesDetails = () => {
           </MovieWrapper>
         </Item>
       </MainWrap>
+      <InfoTitle>Additional information</InfoTitle>
       <BtnWrap>
         <NavBtn to={`/movies/${id}/cast`}>Cast</NavBtn>
         <NavBtn to={`/movies/${id}/reviews`}>Review</NavBtn>

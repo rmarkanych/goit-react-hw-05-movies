@@ -1,7 +1,13 @@
 import { getMovieCast } from '../../services/myApi';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { CastList, CastItem, CastImage, CastParagrapher } from './Cast.styled';
+import {
+  CastList,
+  CastItem,
+  CastImage,
+  CastParagrapher,
+  SpanWrap,
+} from './Cast.styled';
 const Cast = () => {
   const { movieId } = useParams();
   const [movieCast, setMovieCast] = useState([]);
@@ -20,9 +26,15 @@ const Cast = () => {
                   src={`https://image.tmdb.org/t/p/w500/${profile_path}`}
                   alt={name}
                 />
-                <CastParagrapher>{name}</CastParagrapher>
-                <CastParagrapher>{character}</CastParagrapher>
-                <CastParagrapher>{popularity}</CastParagrapher>
+                <CastParagrapher>
+                  <SpanWrap>Name:</SpanWrap> {name}
+                </CastParagrapher>
+                <CastParagrapher>
+                  <SpanWrap>Character:</SpanWrap> {character}
+                </CastParagrapher>
+                <CastParagrapher>
+                  <SpanWrap>Popularity:</SpanWrap> {popularity.toFixed(1)}
+                </CastParagrapher>
               </CastItem>
             );
           }

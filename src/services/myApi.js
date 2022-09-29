@@ -54,3 +54,14 @@ export const getMovieCast = async movieId => {
     console.log(error);
   }
 };
+
+export const getMovieReview = async movieId => {
+  try {
+    const { data } = await axios.get(
+      `movie/${movieId}/reviews?api_key=${API_KEY}&language=en-US`
+    );
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};
