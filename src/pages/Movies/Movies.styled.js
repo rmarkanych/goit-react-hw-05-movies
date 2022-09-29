@@ -5,7 +5,7 @@ export const MoviesForm = styled.form`
   align-items: center;
   width: 100%;
   max-width: 400px;
-  background-color: #fff;
+  background-color: black;
   border-radius: 3px;
   overflow: hidden;
   margin: 0 auto;
@@ -16,15 +16,19 @@ export const MoviesForm = styled.form`
 export const MoviesInput = styled.input`
   display: inline-block;
   width: 100%;
-  /* font: inherit; */
+  background-color: black;
   font-size: 20px;
   border: none;
   outline: none;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: orange;
   &::placeholder {
-    /* font: inherit; */
     font-size: 18px;
+  }
+  &::selection {
+    color: black;
+    background: orange;
   }
 `;
 
@@ -33,9 +37,8 @@ export const MoviesBtn = styled.button`
   width: 50px;
   height: 50px;
   border: 0;
-  background-color: white;
+  background: orange;
   background-image: url('https://cdn-icons-png.flaticon.com/128/8443/8443367.png');
-  margin-right: 10px;
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
@@ -60,4 +63,49 @@ export const BtnIcon = styled.span`
   clip-path: inset(50%);
   border: 0;
   background-color: transparent;
+`;
+
+export const MovieList = styled.ul`
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding-bottom: 20px;
+`;
+
+export const MovieItem = styled.li`
+  list-style: none;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    transform: scale(1.03);
+  }
+`;
+
+export const MovieImage = styled.img`
+  box-shadow: 3px 3px 9px black;
+  width: 250px;
+  height: 400px;
+  border-radius: 50px;
+`;
+export const MovieParagrapher = styled.p`
+  text-align: center;
+  color: gray;
+  font-family: 'Caveat Brush';
+  font-size: 20px;
+  margin-bottom: 7px;
+  margin-top: 7px;
+  width: 250px;
+`;
+export const MovieRate = styled.p`
+  text-align: center;
+  color: orange;
+  font-family: 'Caveat Brush';
+  font-size: 20px;
+  border: 1px solid black;
+  background-color: black;
+  margin: 0 auto;
+  width: 50px;
+  border-radius: 5px;
 `;
