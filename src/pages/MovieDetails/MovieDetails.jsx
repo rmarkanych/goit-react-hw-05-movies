@@ -1,6 +1,8 @@
 import { useParams, Outlet, useLocation } from 'react-router-dom';
 import { getSearchedDetails } from '../../services/myApi';
 import { useEffect, useState } from 'react';
+import { Suspense } from 'react';
+import Loader from 'components/Loader/Loader';
 import {
   Item,
   Image,
@@ -83,7 +85,9 @@ const MoviesDetails = () => {
         </NavBtn>
       </BtnWrap>
 
-      <Outlet />
+      <Suspense fallback={<Loader />}>
+        <Outlet />
+      </Suspense>
     </>
   );
 };

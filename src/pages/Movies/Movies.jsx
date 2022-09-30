@@ -19,7 +19,6 @@ const Movies = () => {
   const [searchInput, setSearchInput] = useState('');
   const [searchedMovies, setSearchedMovies] = useState([]);
   const location = useLocation();
-  // const backLinkHref = location.state?.from ?? '/movie';
   const query = search.get('query');
   const page = search.get('page');
   const onFormSubmit = e => {

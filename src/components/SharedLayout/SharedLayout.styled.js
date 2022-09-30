@@ -39,4 +39,3 @@ export const NavItem = styled(NavLink)`
     transform: scale(1.05);
   }
 `;
-export const MainWrapper = styled.div``;
