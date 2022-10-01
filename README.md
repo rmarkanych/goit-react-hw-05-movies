@@ -1,5 +1,5 @@
 ## Movies project
-
+<img width="503" alt="Screenshot 2022-10-02 at 01 53 34" src="https://user-images.githubusercontent.com/82537324/193431194-1c2939cf-2c8c-4266-8d82-900f82b713a8.png">
 This project was created by
 [Create React App](https://github.com/facebook/create-react-app).
 If you need more information:
@@ -20,3 +20,4 @@ If you need more information:
 6. Go to [http://localhost:3000/movies-project] in the browser.
    This page will automatically reload after saving the changes
    project files.
+
