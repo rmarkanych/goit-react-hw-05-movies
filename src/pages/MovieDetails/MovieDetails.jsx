@@ -2,6 +2,7 @@ import { useParams, Outlet, useLocation } from 'react-router-dom';
 import { getSearchedDetails } from '../../services/myApi';
 import { useEffect, useState } from 'react';
 import { Suspense } from 'react';
+import { BsArrowLeft } from 'react-icons/bs';
 import Loader from 'components/Loader/Loader';
 import {
   Item,
@@ -22,13 +23,18 @@ import {
 
 const MoviesDetails = () => {
   const { movieId } = useParams();
+
   const [movie, setMovie] = useState(null);
+
   const location = useLocation();
+
   const backLinkHref = location.state?.from ?? '/movies';
+
   useEffect(() => {
     getSearchedDetails(movieId).then(data => setMovie(data));
     // eslint-disable-next-line
   }, []);
+
   if (movie === null) return;
 
   const {
@@ -46,8 +52,7 @@ const MoviesDetails = () => {
   return (
     <>
       <BtnBack to={backLinkHref} state={{ from: backLinkHref }}>
-        {' '}
-        ↩{' '}
+        <BsArrowLeft />
       </BtnBack>
       <MainWrap>
         <Item key={id}>

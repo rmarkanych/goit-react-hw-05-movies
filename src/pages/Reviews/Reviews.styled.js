@@ -7,7 +7,9 @@ export const ReviewList = styled.ul`
 export const ErrorTitle = styled.p`
   font-size: 40px;
   font-family: 'Caveat Brush';
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 `;
 export const ReviewItem = styled.li`

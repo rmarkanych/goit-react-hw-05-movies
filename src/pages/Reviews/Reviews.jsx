@@ -1,6 +1,7 @@
 import { getMovieReview } from '../../services/myApi';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { FaSadTear } from 'react-icons/fa';
 import {
   ReviewList,
   ErrorTitle,
@@ -22,7 +23,10 @@ const Reviews = () => {
   return (
     <ReviewList>
       {movieReview.length === 0 ? (
-        <ErrorTitle>We don't have any reviews for this movie 😢</ErrorTitle>
+        <ErrorTitle>
+          We don't have any reviews for this movie{' '}
+          <FaSadTear style={{ marginLeft: '5px' }} />
+        </ErrorTitle>
       ) : (
         movieReview.map(({ author, content, id }) => {
           return (

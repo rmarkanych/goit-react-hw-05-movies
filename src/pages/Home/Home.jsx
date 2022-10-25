@@ -12,10 +12,13 @@ import { Link, useLocation } from 'react-router-dom';
 
 const Home = () => {
   const [moviesTrend, setMoviesTrend] = useState([]);
+
   const location = useLocation();
+
   useEffect(() => {
     getTrendMovie().then(data => setMoviesTrend(data.results));
   }, []);
+
   return (
     <>
       <HomeTitle>Trending today</HomeTitle>

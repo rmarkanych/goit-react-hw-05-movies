@@ -8,13 +8,17 @@ import {
   CastParagrapher,
   SpanWrap,
 } from './Cast.styled';
+
 const Cast = () => {
   const { movieId } = useParams();
+
   const [movieCast, setMovieCast] = useState([]);
+
   useEffect(() => {
     getMovieCast(movieId).then(data => setMovieCast(data.cast));
     // eslint-disable-next-line
   }, []);
+
   return (
     <>
       <CastList>
