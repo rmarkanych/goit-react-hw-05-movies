@@ -3,19 +3,24 @@ import styled from 'styled-components';
 export const CastList = styled.ul`
   display: flex;
   justify-content: center;
-  gap: 30px;
+  align-items: center;
   flex-wrap: wrap;
-  margin: 0;
+  gap: 30px;
+  margin: 0 auto;
+  padding-left: 0;
 `;
+
 export const CastItem = styled.li`
   list-style: none;
 `;
+
 export const CastImage = styled.img`
   box-shadow: 3px 3px 9px black;
   width: 250px;
   height: 400px;
   border-radius: 50px;
 `;
+
 export const CastParagrapher = styled.p`
   width: 250px;
   text-align: center;
@@ -25,6 +30,7 @@ export const CastParagrapher = styled.p`
   margin-bottom: 0;
   margin-top: 5px;
 `;
+
 export const SpanWrap = styled.span`
   color: black;
 `;

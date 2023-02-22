@@ -3,13 +3,15 @@ import styled from 'styled-components';
 export const MoviesForm = styled.form`
   display: flex;
   align-items: center;
-  width: 100%;
-  max-width: 400px;
+  width: 250px;
   background-color: black;
   border-radius: 3px;
   overflow: hidden;
   margin: 0 auto;
   margin-top: 20px;
+  @media screen and (min-width: 460px) {
+   width: 400px;
+  }
 `;
 
 export const MoviesInput = styled.input`
@@ -29,6 +31,7 @@ export const MoviesInput = styled.input`
     color: black;
     background: orange;
   }
+
 `;
 
 export const MoviesBtn = styled.button`
@@ -89,6 +92,7 @@ export const MovieImage = styled.img`
   height: 400px;
   border-radius: 50px;
 `;
+
 export const MovieParagrapher = styled.p`
   text-align: center;
   color: gray;
@@ -98,6 +102,7 @@ export const MovieParagrapher = styled.p`
   margin-top: 0;
   width: 250px;
 `;
+
 export const MovieRate = styled.p`
   text-align: center;
   color: orange;

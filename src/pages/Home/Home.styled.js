@@ -3,12 +3,11 @@ import styled from 'styled-components';
 export const HomeTitle = styled.h1`
   text-align: center;
   font-family: 'Caveat Brush';
-  font-size: 40px;
+   font-size: 40px;
 `;
 
 export const HomeList = styled.ul`
   display: flex;
-
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
@@ -18,19 +17,10 @@ export const HomeList = styled.ul`
 `;
 
 export const HomeItem = styled.li`
-  /* /* background-color: #fff; */
-
-  /* align-self: stretch;
-  display: flex; */
-  /* flex-direction: column; */
   list-style: none;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
     transform: scale(1.03);
-  }
-  :last-child {
-    /* display: flex; */
-    /* align-self: flex-end; */
   }
 `;
 
@@ -40,6 +30,7 @@ export const HomeImage = styled.img`
   height: 400px;
   border-radius: 50px;
 `;
+
 export const HomeParagrapher = styled.p`
   width: 250px;
   text-align: center;
@@ -49,6 +40,7 @@ export const HomeParagrapher = styled.p`
   margin-bottom: 7px;
   margin-top: 0;
 `;
+
 export const HomeRate = styled.p`
   text-align: center;
   color: orange;

@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 import { NavLink, Link } from 'react-router-dom';
+
 export const Item = styled.li`
   list-style: none;
   display: flex;
   justify-content: center;
 `;
+
 export const BtnBack = styled(Link)`
   display: flex;
   max-width: 40px;
@@ -27,77 +29,105 @@ export const BtnBack = styled(Link)`
     color: gray;
   }
 `;
+
 export const MainWrap = styled.div`
   background-color: black;
-  max-width: 1125px;
+  max-width: 625px;
   margin: 0 auto;
   border-radius: 50px;
-  max-height: 735px;
+  max-height: 600px;
   box-shadow: 3px 3px 9px black;
+  @media screen and (min-width: 768px) {
+  max-width: 1125px;
+  max-height: 735px;
+  }
 `;
+
 export const Image = styled.img`
-  max-width: 400px;
+  max-width: 200px;
+  max-height: 600px;
   margin: 0;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
-  max-height: 725px;
+  @media screen and (min-width: 768px) {
+  max-width: 400px;
+    max-height: 725px;
+  }
 `;
+
 export const MovieWrapper = styled.div`
   margin-left: 20px;
   margin-top: 20px;
 `;
+
 export const Title = styled.h1`
   font-family: 'Caveat Brush';
-  font-size: 40px;
+    font-size: 18px;
   color: orange;
   margin: 0;
   margin-top: 5px;
   margin-bottom: 5px;
+  @media screen and (min-width: 768px) {
+     font-size: 30px;
+  }
 `;
+
 export const ScoreParagrapher = styled.p`
   font-family: 'Caveat Brush';
-  font-size: 40px;
   color: orange;
   margin: 0;
   color: #fbab7e;
   margin-top: 5px;
   margin-bottom: 5px;
+  @media screen and (min-width: 768px) {
+  font-size: 30px;
+  }
 `;
 
 export const OverviewTitle = styled.h2`
   font-family: 'Caveat Brush';
   color: orange;
-  font-size: 40px;
   margin: 0;
   margin-top: 5px;
   margin-bottom: 5px;
+  @media screen and (min-width: 768px) {
+  font-size: 30px;
+  }
 `;
+
 export const GenresTitle = styled.h2`
   font-family: 'Caveat Brush';
-  font-size: 40px;
   color: orange;
   margin: 0;
   margin-top: 5px;
   margin-bottom: 5px;
+  @media screen and (min-width: 768px) {
+  font-size: 30px;
+  }
 `;
 export const OverviewParagrapher = styled.p`
   font-family: 'Caveat Brush';
   max-width: 700px;
   color: orange;
-  font-size: 30px;
   margin: 0;
   color: #fbab7e;
   margin-top: 5px;
   margin-bottom: 5px;
+  @media screen and (min-width: 768px) {
+  font-size: 30px;
+  }
 `;
-export const GenresParapher = styled.p`
+
+export const GenresParagrapher = styled.p`
   font-family: 'Caveat Brush';
-  font-size: 40px;
   color: orange;
   margin: 0;
   color: #fbab7e;
   margin-top: 5px;
   margin-bottom: 5px;
+  @media screen and (min-width: 768px) {
+  font-size: 30px;
+  }
 `;
 
 export const BtnWrap = styled.div`
@@ -109,7 +139,6 @@ export const BtnWrap = styled.div`
 
 export const NavBtn = styled(NavLink)`
   padding: 5px 15px;
-  font-size: 30px;
   margin-bottom: 20px;
   text-decoration: none;
   background-color: orange;
@@ -124,10 +153,16 @@ export const NavBtn = styled(NavLink)`
     color: gray;
     transform: scale(1.05);
   }
+  @media screen and (min-width: 768px) {
+  font-size: 30px;
+  }
 `;
+
 export const InfoTitle = styled.h2`
   font-family: 'Caveat Brush';
-  font-size: 30px;
   display: block;
   text-align: center;
+  @media screen and (min-width: 768px) {
+  font-size: 30px;
+  }
 `;

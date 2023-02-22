@@ -15,12 +15,14 @@ import {
 import { getSearchedQuery } from '../../services/myApi';
 
 const Movies = () => {
+  
   const [search, setSearch] = useSearchParams();
   const [searchInput, setSearchInput] = useState('');
   const [searchedMovies, setSearchedMovies] = useState([]);
   const location = useLocation();
   const query = search.get('query');
   const page = search.get('page');
+
   const onFormSubmit = e => {
     e.preventDefault();
     setSearch({ query: searchInput });
@@ -30,6 +32,7 @@ const Movies = () => {
     if (!query) return;
     getSearchedQuery(query, page).then(data => setSearchedMovies(data.results));
   }, [query, page]);
+
   return (
     <>
       <MoviesForm onSubmit={onFormSubmit}>

@@ -3,6 +3,7 @@ import { getSearchedDetails } from '../../services/myApi';
 import { useEffect, useState } from 'react';
 import { Suspense } from 'react';
 import { BsArrowLeft } from 'react-icons/bs';
+import ReactReadMoreReadLess from 'react-read-more-read-less';
 import Loader from 'components/Loader/Loader';
 import {
   Item,
@@ -13,7 +14,7 @@ import {
   OverviewTitle,
   OverviewParagrapher,
   GenresTitle,
-  GenresParapher,
+  GenresParagrapher,
   MainWrap,
   NavBtn,
   BtnWrap,
@@ -62,7 +63,7 @@ const MoviesDetails = () => {
                 ? `https://image.tmdb.org/t/p/w500/${poster_path}`
                 : 'https://westsiderc.org/wp-content/uploads/2019/08/Image-Not-Available.png'
             }
-            alt="dasdas"
+            alt="poster"
           />
           <MovieWrapper>
             <Title>
@@ -72,11 +73,18 @@ const MoviesDetails = () => {
               User Score: {((vote_average * 100) / 10).toFixed(1)}%
             </ScoreParagrapher>
             <OverviewTitle>Overview:</OverviewTitle>
-            <OverviewParagrapher>{overview}</OverviewParagrapher>
+            <OverviewParagrapher>
+                 <ReactReadMoreReadLess
+                  charLimit={100}
+                  readMoreText={'Read more ▼'}
+                readLessText={'Read less ▲'}>
+                {overview}
+                </ReactReadMoreReadLess>
+              </OverviewParagrapher>
             <GenresTitle>Genres:</GenresTitle>
-            <GenresParapher>
+            <GenresParagrapher>
               {genres.map(({ name }) => name + ' ')}
-            </GenresParapher>
+            </GenresParagrapher>
           </MovieWrapper>
         </Item>
       </MainWrap>
