@@ -1,5 +1,5 @@
 ## Movies project 
-If you want to open live page click [here](https://rmarkanych.github.io/movies-project/) .
+If you want to open live page click [here](https://rmarkanych-movies.netlify.app/) .
 
 <img width="503" alt="Screenshot 2022-10-02 at 01 53 34" src="https://user-images.githubusercontent.com/82537324/193431194-1c2939cf-2c8c-4266-8d82-900f82b713a8.png">
 
