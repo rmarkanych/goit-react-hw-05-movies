@@ -19,7 +19,7 @@ If you need more information: [check the documentation](https://facebook.github.
 
 5. Start the development mode, executed the `npm start` command.
 
-6. Go to [http://localhost:3000/movies-project] in the browser.
+6. Go to [http://localhost:3000/movies] in the browser.
    This page will automatically reload after saving the changes
    project files.
 
